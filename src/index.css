@@ -1,0 +1,14 @@
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components; */
+@tailwind utilities;
+
+.btn{
+    @apply flex items-center justify-center text-white rounded-sm
+}
+/* styles.css */
+.col-span-dynamic-3 { @apply col-span-3; }
+.col-span-dynamic-4 { @apply col-span-4; }
+.col-span-dynamic-6 { @apply col-span-6; }
+.col-span-dynamic-12 { @apply col-span-12; }
+/* etc. */
