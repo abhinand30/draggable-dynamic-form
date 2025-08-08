@@ -77,9 +77,12 @@ const DynamicForm = () => {
         }
         else {
             const newId = generateUniqueId();
-            // chacking null fields
+            // checking null fields
+            const accordionError = checkValidation({ validation: 'accordion', dynamicForm, accordionId });//for updationg accordion errors
             const fieldErrors = checkValidation({ validation: 'field', dynamicForm, accordionId });
-            if (Object.keys(fieldErrors).length > 0) return setErrors(fieldErrors);
+            if (Object.keys(fieldErrors).length > 0){
+                 return setErrors({...fieldErrors,...accordionError});
+            }
             switch (targetedItem) {
                 case 'accordion':
                     const accordionErrors = checkValidation({ validation: 'accordion', dynamicForm });

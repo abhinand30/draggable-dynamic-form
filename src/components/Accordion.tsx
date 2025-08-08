@@ -26,7 +26,7 @@ const Accordion: React.FC<AccordionType> = ({ children, accordionId, handleClick
                     aria-controls="accordion-open-body-1"
                 >
                     <div className="" >
-                       <p>{dynamicForm?<input name={dynamicForm[accordionId].title} value={dynamicForm[accordionId].title} onChange={(e)=>handleChange({ e,isTitle:true,  accordionId: accordionId })} placeholder='Enter Accordion Name'/>:
+                       <p>{dynamicForm?<input id={accordionId} name={dynamicForm[accordionId].title} value={dynamicForm[accordionId].title} onChange={(e)=>handleChange({ e,isTitle:true,  accordionId: accordionId })} placeholder='Enter Accordion Name'/>:
                        accordionName}</p>
                         <p className='text-red-500 text-md'>{errors&&errors[accordionId]}</p>
                     </div>
