@@ -48,7 +48,7 @@ const PreviewComponent: React.FC<PreviewComponentProps> = ({ dynamicForm }) => {
             className='w-10/12 border-1 mt-6 p-4'
         >
             {Object.keys(dynamicForm).map((accordionId) => (
-                <Accordion accordionId={accordionId} key={accordionId} handleClick={handleAccordionToggle} activeAccordion={activeAccordion} >
+                <Accordion accordionId={accordionId} key={accordionId} handleClick={handleAccordionToggle} activeAccordion={activeAccordion} accordionName={dynamicForm[accordionId].title}>
                     <div
                         className="grid grid-cols-12 p-4 gap-4 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-50"
                     >

@@ -14,6 +14,7 @@ interface FormField {
 
 interface FormData {
     formFields: FormField[];
+    title:string;
 }
 
 type DynamicFormType = {

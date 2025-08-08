@@ -45,7 +45,9 @@ export const checkAllValidation = (dynamicForm: DynamicFormType) => {
     const newError: ErrorType = {}
     Object.entries(dynamicForm).forEach(([id, accordion]) => {
         // check accordion
-        if (accordion.formFields.length === 0) {
+         if(accordion.title===''){
+             newError[id] = 'Accordion name is required';
+        }else if(accordion.formFields.length === 0) {
             newError[id] = 'Accordion must contain at least one field';
         }
         accordion.formFields.forEach((form) => {
